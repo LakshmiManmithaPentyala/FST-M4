@@ -4,6 +4,7 @@ root@ea6a30b53525:/# hdfs dfs -ls  /user/lakshmimanmitha
 Found 2 items
 -rw-r--r--   1 root supergroup         22 2022-11-24 12:43 /user/lakshmimanmitha/file01.txt
 drwxr-xr-x   - root supergroup          0 2022-11-24 10:44 /user/lakshmimanmitha/input
+
 root@ea6a30b53525:/# vi wordcount.pig
 
 -- Load input file from HDFS
