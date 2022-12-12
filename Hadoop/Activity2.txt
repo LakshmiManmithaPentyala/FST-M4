@@ -1,6 +1,4 @@
 root@ea6a30b53525:/# vi file01.txt
-Hello World Bye World
-
 root@ea6a30b53525:/# hdfs dfs -put ./file01.txt /user/lakshmimanmitha/
 root@ea6a30b53525:/# hdfs dfs -ls  /user/lakshmimanmitha
 Found 2 items
@@ -24,7 +22,7 @@ root@ea6a30b53525:/# pig wordcount.pig
 2021-09-12 12:10:27,477 INFO pig.ExecTypeProvider: Trying ExecType : MAPREDUCE
 2021-09-12 12:10:27,681 INFO pig.ExecTypeProvider: Picked MAPREDUCE as the ExecType
 2021-09-12 12:10:27,776 [main] INFO  org.apache.pig.Main - Apache Pig version 0.17.0 (r1797386) compiled Jun 02 2017, 15:41:58
-2021-09-12 12:10:27,776 [main] INFO  org.apache.pig.Main - Logging error messages to: //pig_1631364267666.log
+2021-09-12 12:10:27,776 [main] INFO  org.apache.pig.Main - Logging error messages to: //pig_1631384267676.log
 .............
 dSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
 2022-09-12 12:14:32,460 [main] INFO  org.apache.hadoop.ipc.Client - Retrying connect to server: 0.0.0.0/0.0.0.0:10020. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1000 MILLISECONDS)
