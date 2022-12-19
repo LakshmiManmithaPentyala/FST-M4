@@ -6,6 +6,4 @@ TBLPROPERTIES ("skip.header.line.count"="2");
 
 LOAD DATA LOCAL INPATH '/episodeV_dialouges.txt' INTO TABLE episodeV;
 
-SELECT name,count(name) AS linecnt FROM episodeV
-GROUP BY name
-ORDER BY linecnt DESC;
+INSERT OVERWRITE LOCAL DIRECTORY '/output5' ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' SELECT name, COUNT(*) as linecount FROM episodeV GROUP BY name ORDER BY linecount DESC;
