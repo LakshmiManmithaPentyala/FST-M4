@@ -2,4 +2,4 @@ CREATE TABLE episodeIV (name STRING, line STRING) ROW FORMAT DELIMITED FIELDS TE
 
 LOAD DATA LOCAL INPATH '/inputs/episodeIV_dialouges.txt' INTO TABLE episodeIV;
 
-SELECT name, COUNT(name) AS no_of_lines from episodeIV GROUP BY name ORDER BY linecnt DESC;
+INSERT OVERWRITE LOCAL DIRECTORY '/output4' ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' SELECT name, COUNT(*) as linecount FROM episodeIV GROUP BY name ORDER BY linecount DESC;
